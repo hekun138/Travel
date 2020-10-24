@@ -12,16 +12,16 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
-          <div class="button-wrapper">
-            <div class="button">北京</div>
+          <div class="button-wrapper" v-for="item of hot" :key="item.id">
+            <div class="button">{{item.name}}</div>
           </div>
         </div>
       </div>
-      <div class="area">
+      <div class="area" v-for="(item, key) in cities" :key="key">
         <div class="title border-topbottom">A</div>
         <div class="item-list">
-          <div class="item border-bottom">
-            阿拉尔
+          <div class="item border-bottom" v-for="innerItem in item" :key="innerItem.id">
+            {{innerItem.name}}
           </div>
         </div>
       </div>
@@ -30,12 +30,19 @@
 </template>
 
 <script>
-import Bscroll from 'better-scroll'
+import Bscroll from '@better-scroll/core'
 
 export default {
   name: 'CityList',
+  props: {
+    hot: Array,
+    cities: Object
+  },
   mounted () {
-    this.scroll = new Bscroll(this.$refs.wrapper)
+    this.scroll = new Bscroll('.list', {})
+  },
+  updated () {
+    this.scroll.refresh()
   }
 }
 </script>
