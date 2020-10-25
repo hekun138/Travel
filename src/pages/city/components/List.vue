@@ -82,6 +82,9 @@ export default {
   },
   computed: {
     ...mapState(['city'])
+  },
+  activated () {
+    this.scroll.refresh()
   }
 }
 </script>
