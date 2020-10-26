@@ -3,10 +3,10 @@
     <div class="banner" @click="handleBannerClick">
       <img class="banner-img" :src="bannerImg"/>
       <div class="banner-info">
-        <div class="banner-title">{{this.sightName}}</div>
+        <div class="banner-title">{{sightName}}</div>
         <div class="banner-number">
           <span class="iconfont banner-icon">&#xe632;</span>
-          {{this.gallaryImgs.length}}
+          {{gallaryImgs.length}}
         </div>
       </div>
     </div>

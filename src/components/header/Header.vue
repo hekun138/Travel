@@ -9,7 +9,7 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        {{this.city}}
+        {{city}}
         <span class="iconfont icon-jiantou arrow-icon"></span>
       </div>
     </router-link>
