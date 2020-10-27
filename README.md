@@ -22,4 +22,4 @@ npm run lint
 
 #### 项目描述
 
-![Travel](/Users/mac/Desktop/Travel.png)
+![Travel](https://github.com/hekun138/Travel/blob/main/static/Travel.png?raw=true)
